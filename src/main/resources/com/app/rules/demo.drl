@@ -1,0 +1,20 @@
+package com.app.rules;
+import com.app.model.Person;
+
+
+rule "person age is above 30  - Scenario 1"
+    when
+        person:Person(pAge > 30);
+    then
+       	person.setpState("person from Kentucky");
+end
+
+rule "person age is below 30 - Scenario 2"
+   when
+        person:Person(pAge < 30);
+    then
+       
+       	person.setpState("He is not from Kentucky");
+end
+
+
